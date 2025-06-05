@@ -10,12 +10,11 @@ const Home = () => {
         <div className="container">
           <Link className="navbar-brand d-flex align-items-center" to="/">
             <img 
-              src="/portfolio-react1/assets/images/M.png" 
+              src={process.env.PUBLIC_URL + '/assets/images/M.png'} 
               alt="Logo MH" 
               className="img-fluid rounded-circle me-2" 
               style={{ maxWidth: '60px', marginTop: '15px' }}
             />
-            {/* Removendo o texto do cabeçalho */}
           </Link>
 
           {/* Links de Navegação sempre visíveis */}
@@ -154,7 +153,7 @@ const Home = () => {
           {/* Imagem 3x4 */}
           <div className="col-md-4 text-center">
             <img 
-              src="/portfolio-react1/assets/images/3x4.jpg" 
+              src={process.env.PUBLIC_URL + '/assets/images/3x4.jpg'} 
               alt="Sua Foto 3x4" 
               className="img-fluid" 
               style={{ maxWidth: '300px', marginTop: '-100px', borderRadius: '10px' }}
@@ -166,7 +165,7 @@ const Home = () => {
           {/* Imagem do Notebook */}
           <div className="col-md-6 mb-4 mb-md-0">
             <img 
-              src="/portfolio-react1/assets/images/tela.code.jpg" 
+              src={process.env.PUBLIC_URL + '/assets/images/tela.code.jpg'} 
               alt="Notebook code"
               className="img-fluid mt-4" 
               style={{ maxWidth: '300px', width: '70%', height: '90%' }} 
@@ -237,9 +236,10 @@ const Home = () => {
         {/* Footer */}
         <footer className="footer mt-auto py-3 bg-dark text-white">
           <div className="container text-center">
-            <span>&copy; {new Date().getFullYear()} Manoela Harrison. Todos os direitos reservados.</span>
-            {/* Adicionando informações de contato no rodapé */}
+            {/* Informações de contato primeiro */}
             <ContactInfo />
+            {/* Copyright depois */}
+            <span className="mt-3 d-block">&copy; {new Date().getFullYear()} Manoela Harrison. Todos os direitos reservados.</span>
           </div>
         </footer>
       </div>

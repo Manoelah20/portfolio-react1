@@ -10,7 +10,7 @@ const NotFound = () => {
         <div className="container">
           <Link className="navbar-brand d-flex align-items-center" to="/">
             <img 
-              src="/assets/images/M.png" 
+              src="/portfolio-react1/assets/images/M.png" 
               alt="Logo MH" 
               className="img-fluid rounded-circle me-2" 
               style={{ maxWidth: '60px', marginTop: '15px' }}

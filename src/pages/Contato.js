@@ -46,7 +46,7 @@ const Contato = () => {
         <div className="container">
           <Link className="navbar-brand d-flex align-items-center" to="/">
             <img 
-              src="/assets/images/M.png" 
+              src={process.env.PUBLIC_URL + '/assets/images/M.png'} 
               alt="Logo MH" 
               className="img-fluid rounded-circle me-2" 
               style={{ maxWidth: '60px', marginTop: '15px' }}
@@ -195,8 +195,10 @@ const Contato = () => {
         {/* Footer */}
         <footer className="footer mt-auto py-3 bg-dark text-white">
           <div className="container text-center">
-            <span>&copy; {new Date().getFullYear()} Manoela Harrison. Todos os direitos reservados.</span>
+            {/* Informações de contato primeiro */}
             <ContactInfo />
+            {/* Copyright depois */}
+            <span className="mt-3 d-block">&copy; {new Date().getFullYear()} Manoela Harrison. Todos os direitos reservados.</span>
           </div>
         </footer>
       </section>

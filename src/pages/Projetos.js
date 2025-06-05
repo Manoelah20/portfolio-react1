@@ -15,7 +15,7 @@ const Projetos = () => {
       titulo: "Portfólio",
       descricao: "Portfólio pessoal desenvolvido com React e Tailwind CSS",
       tecnologias: ["React", "Tailwind CSS", "JavaScript"],
-      imagem: "/portfolio-react1/assets/images/portfolio.JV.png",
+      imagem: process.env.PUBLIC_URL + '/assets/images/portfolio.JV.png',
       link: "https://github.com/manoelah20/portfolio-react"
     },
     {
@@ -23,7 +23,7 @@ const Projetos = () => {
       titulo: "Blog",
       descricao: "Blog desenvolvido com React e Firebase",
       tecnologias: ["React", "JavaScript", "CSS"],
-      imagem: "/portfolio-react1/assets/images/blog.vivi.png",
+      imagem: process.env.PUBLIC_URL + '/assets/images/blog.vivi.png',
       link: "https://github.com/manoelah20/blog-react"
     },
     {
@@ -31,7 +31,7 @@ const Projetos = () => {
       titulo: "Landing Page",
       descricao: "Landing page desenvolvida com HTML, CSS e JavaScript",
       tecnologias: ["HTML", "CSS", "JavaScript"],
-      imagem: "/portfolio-react1/assets/images/landing2.png",
+      imagem: process.env.PUBLIC_URL + '/assets/images/landing2.png',
       link: "https://github.com/manoelah20/landing-page"
     },
     {
@@ -39,7 +39,7 @@ const Projetos = () => {
       titulo: "Eco Site",
       descricao: "Site institucional desenvolvido com HTML, CSS e JavaScript",
       tecnologias: ["React", "Node.js", "MongoDB"],
-      imagem: "/portfolio-react1/assets/images/Lp.png",
+      imagem: process.env.PUBLIC_URL + '/assets/images/Lp.png',
       link: "https://github.com/manoelah20/eco-site"
     },
     {
@@ -47,7 +47,7 @@ const Projetos = () => {
       titulo: "Logo",
       descricao: "Desenvolvimeto de um logo para cliente",
       tecnologias: ["Figma", "Adobe Photoshop"],
-      imagem: "/portfolio-react1/assets/images/logo.FA.png",
+      imagem: process.env.PUBLIC_URL + '/assets/images/logo.FA.png',
       link: "https://github.com/manoelah20/logo-design"
     }
   ];
@@ -59,7 +59,7 @@ const Projetos = () => {
         <div className="container">
           <Link className="navbar-brand d-flex align-items-center" to="/">
             <img 
-              src="/portfolio-react1/assets/images/M.png" 
+              src={process.env.PUBLIC_URL + '/assets/images/M.png'} 
               alt="Logo MH" 
               className="img-fluid rounded-circle me-2" 
               style={{ maxWidth: '60px', marginTop: '15px' }}
@@ -198,8 +198,8 @@ const Projetos = () => {
         {/* Footer */}
         <footer className="footer mt-auto py-3 bg-dark text-white">
           <div className="container text-center">
-            <span>&copy; {new Date().getFullYear()} Manoela Harrison. Todos os direitos reservados.</span>
             <ContactInfo />
+            <span className="mt-3 d-block">&copy; {new Date().getFullYear()} Manoela Harrison. Todos os direitos reservados.</span>
           </div>
         </footer>
       </section>
